@@ -1,13 +1,17 @@
 <template>
   <div>
-    maximiliano
+    <login />
   </div>
 </template>
 
 <script>
+ import login from '~/components/user/login.vue'
 export default {
   name: 'IndexPage',
-  layout: 'login'
+  layout: 'login',
+  components: {
+    login
+  }
 }
 </script>
 
