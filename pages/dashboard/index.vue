@@ -1,18 +1,16 @@
 <template>
+    <h1>Hola</h1>
+</template>
+
+<template>
     <login />
 </template>
 
 <script>
 import login from '~/components/user/login.vue'
 export default {
-  name: 'IndexPage',
-  layout: 'login',
-  components: {
-    login
-  }
+  layout: 'dashboard',
+  
 }
 </script>
 
-<style scoped>
-  
-</style>
