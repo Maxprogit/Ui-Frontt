@@ -1,16 +1,16 @@
 <template>
-    <h1>Hola</h1>
-</template>
-
-<template>
-    <login />
+  <div style="padding: 20px;">
+    <principal/>
+  </div>
 </template>
 
 <script>
-import login from '~/components/user/login.vue'
+import principal from '../../components/dashboard/principal.vue';
 export default {
+  auth: true,
   layout: 'dashboard',
-  
+  components: {
+    principal
+  }
 }
 </script>
-

@@ -59,16 +59,30 @@ export default {
         }
     },
     methods: {
-        loginBackend () {
-            const valid = this.$refs.formLogin.validate() 
+        async loginBackend () {
+            const valid = this.$refs.formLogin.validate()
             if (valid) {
-                alert('presionaste el boton')
+                const sendData = {
+                    email: this.correoElectronico,
+                    password: this.password
+                }
+                await this.$auth.loginWith('local', {
+                    data: sendData
+                }).then(async (res) => {
+                    console.log('respuesta del back:', res)
+                    if (res.data.alert !== 'Contraseña incorrecta') {
+                        this.$router.push('/dashboard')
+                    } else {
+                        alert('Contraseña incorrecta!!')
+                    }
+                }).catch((error) => {
+                    console.log('error: ', error)
+                })
             }else {
-                alert('no cumpliste las reglas')
+                alert('Introduce los datos correctamente.')
             }
-             
         }
-    }   
+    }
 }
 </script>
 

@@ -32,6 +32,9 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+    router: {
+      middleware: ['auth']
+    },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -67,7 +70,7 @@ export default {
         },
         endopoints: {
           login: {
-            url: '/usuarios/login',
+            url: '/login',
             method: 'post'
           },
           user: false
