@@ -54,7 +54,7 @@ export default {
       login: '/',
       logout: '/',
       home: '/',
-      callbacl: '/'
+      callback: '/'
     },
     localStorage: false,
     resetOnError: true,

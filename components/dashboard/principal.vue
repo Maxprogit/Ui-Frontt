@@ -252,7 +252,7 @@ export default{
                 })
         },
         async eraseUser() {
-            if(this.admin !== 'esotilin'){
+            if(this.admin !== 'maximiliano'){
                 const config = {
                 headers: {
                     'Content-Type': 'application/json;charset=UTF-8',
